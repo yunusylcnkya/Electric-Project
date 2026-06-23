@@ -2,10 +2,19 @@ using System;
 using UnityEngine;
 using DG.Tweening;
 
+
+public enum PortType
+{
+    Input,
+    Output
+}
 public class Port : ElectricUnit
 {
     public int value;
     public Action<int> onValueChanged;
+    public PortType type;
+    public bool isConnected;
+
 
     public Color showColor;
     public Color hideColor;
